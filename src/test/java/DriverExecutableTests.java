@@ -10,7 +10,8 @@ public class DriverExecutableTests {
 
     @BeforeMethod
     public void setUpDriver(){
-        driver = WebDriverManager.chromiumdriver().create();
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
     }
 
     @AfterMethod

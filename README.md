@@ -18,3 +18,26 @@ Tests
 1. written two naive tests, will optimise the tests step by step using pom, waits, data objects and other best
 practices. such that this will convert the naive tests to framework driven, scalable, readable and maintenance 
 less tests.
+
+Page Object Model:
+BaseTest:
+1. Base test contains before and after methods test annotations we use before method
+to initialise the driver and after method to quit the driver. 
+2. It's recommended to create driver instance before every test/method and quit after the 
+test/method
+3. we inherit Base Test to all the test classes.
+4. It also contains all the common methods of the tests.
+
+DriverManager Class:
+1. we maintain the separate factory package and create driver manager class. 
+2. It has driver Initialization method This method criteria is to create the driver and 
+return the driver
+
+BasePage:
+1. It contains all the common methods of the page objects.
+2. All page objects inherit the base page
+
+PageObjects:
+1. page objects contains private final element definitions, public element actions.
+2. Have implemented fluent interface, builder pattern in page objects.
+3. Have created structural as well as functional page object used accordingly

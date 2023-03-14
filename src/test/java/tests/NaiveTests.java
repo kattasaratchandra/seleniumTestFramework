@@ -20,12 +20,11 @@ public class NaiveTests extends BaseTest {
         properties = new Properties();
         properties.load(reader);
         reader.close();
-        driver.get(properties.getProperty("url"));
-        HomePage homePage = new HomePage(driver);
-        StorePage storePage = homePage.clickStoreMenuLink();
-        String actualTitle =storePage
-                .search("Blue")
-                .getPageTitleText();
+        StorePage storePage = new HomePage(driver)
+                .load().
+                clickStoreMenuLink().
+                search("Blue");
+        String actualTitle = storePage.getPageTitleText();
         Assert.assertEquals(actualTitle, "Search results: “Blue”");
         storePage
                 .clickAddToCartButton("Blue Shoes");
@@ -56,12 +55,11 @@ public class NaiveTests extends BaseTest {
         properties = new Properties();
         properties.load(reader);
         reader.close();
-        driver.get(properties.getProperty("url"));
-        HomePage homePage = new HomePage(driver);
-        StorePage storePage = homePage.clickStoreMenuLink();
-        String actualTitle =storePage
-                .search("Blue")
-                .getPageTitleText();
+        StorePage storePage = new HomePage(driver)
+                .load().
+                clickStoreMenuLink().
+                search("Blue");
+        String actualTitle = storePage.getPageTitleText();
         Assert.assertEquals(actualTitle, "Search results: “Blue”");
         storePage
                 .clickAddToCartButton("Blue Shoes");

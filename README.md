@@ -41,3 +41,7 @@ PageObjects:
 1. page objects contains private final element definitions, public element actions.
 2. Have implemented fluent interface, builder pattern in page objects.
 3. Have created structural as well as functional page object used accordingly
+
+Load:
+1. create one common method in Base Page. we send argument as endpoint to get the url 
+2. handled chrome driver latest issue on 111 version using chrome options.

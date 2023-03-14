@@ -2,6 +2,7 @@ package pom.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.LoadableComponent;
 import pom.base.BasePage;
 
 public class CartPage extends BasePage {
